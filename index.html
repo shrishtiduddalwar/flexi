@@ -1,171 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Three Flexboxes Layout</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      height: 100vh;
-      display: flex;
-      gap: 10px;
-      padding: 10px;
-      background-color: #f4f4f4;
-      font-family: sans-serif;
-    }
-
-    /* Box 1: 5 rows in one column */
-    .box1 {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .row {
-      flex: 1;
-      padding: 20px;
-      text-align: center;
-      color: white;
-      font-weight: bold;
-      font-size: 1.1em;
-      border-radius: 8px;
-    }
-
-    .row1 { background-color: skyblue; }
-    .row2 { background-color: royalblue; } /* Changed from dark blue */
-    .row3 { background-color: #C8A2C8; }
-    .row4 { background-color: purple; }
-    .row5 { background-color: red; }
-
-    /* Shared layout for Box 2 and Box 3 */
-    .box2, .box3 {
-      flex: 2;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .top-row, .bottom-row {
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      color: white;
-    }
-
-    /* Box 2 middle layout */
-    .middle-box2 {
-      display: flex;
-      gap: 10px;
-      flex: 1;
-    }
-
-    .left-col {
-      flex: 1;
-      background-color: royalblue; /* Already changed */
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      color: white;
-    }
-
-    .right-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .right-col .row1 {
-      flex: 1;
-      background-color: #C8A2C8; /* Lilac */
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      color: white;
-    }
-
-    .right-col .row2 {
-      flex: 1;
-      background-color: purple;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      color: white;
-    }
-
-    /* Box 3 middle layout */
-    .middle-box3 {
-      display: flex;
-      flex: 1;
-      gap: 10px;
-    }
-
-    .col {
-      flex: 1;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      color: white;
-    }
-
-    /* Box 3 Color Scheme */
-    .box3 .top-row    { background-color: skyblue; }
-    .box3 .col1       { background-color: royalblue; } /* Changed from dark blue */
-    .box3 .col2       { background-color: #C8A2C8; } /* Lilac */
-    .box3 .col3       { background-color: purple; }
-    .box3 .bottom-row { background-color: red; }
-
-    /* Box 2 Color Scheme */
-    .box2 .top-row    { background-color: skyblue; }
-    .box2 .bottom-row { background-color: red; }
-
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Box Layout</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Box 1 -->
-  <div class="box1">
-    <div class="row row1">Row 1 - Sky Blue</div>
-    <div class="row row2">Row 2 - Royal Blue</div>
-    <div class="row row3">Row 3 - Lilac</div>
-    <div class="row row4">Row 4 - Purple</div>
-    <div class="row row5">Row 5 - Red</div>
+  <div class="grid-container">
+    <div class="box header">Header</div>
+    <div class="box nav">Nav</div>
+    <div class="box main">Main (Emial List)</div>
+    <div class="box aside">Aside (Preview Panel)</div>
+    <div class="box footer">Footer</div>
   </div>
 
-  <!-- Box 2 -->
-  <div class="box2">
-    <div class="top-row">Box 2 - Top Row (Sky Blue)</div>
-    <div class="middle-box2">
-      <div class="left-col">Left Column (Royal Blue)</div>
-      <div class="right-col">
-        <div class="row1">Right Col - Row 1 (Lilac)</div>
-        <div class="row2">Right Col - Row 2 (Purple)</div>
-      </div>
-    </div>
-    <div class="bottom-row">Box 2 - Bottom Row (Red)</div>
-  </div>
-
-  <!-- Box 3 -->
-  <div class="box3">
-    <div class="top-row">Box 3 - Top Row (Sky Blue)</div>
-    <div class="middle-box3">
-      <div class="col col1">Col 1 - Royal Blue</div>
-      <div class="col col2">Col 2 - Lilac</div>
-      <div class="col col3">Col 3 - Purple</div>
-    </div>
-    <div class="bottom-row">Box 3 - Bottom Row (Red)</div>
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
